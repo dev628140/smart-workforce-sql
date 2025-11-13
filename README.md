@@ -1,159 +1,141 @@
-📌 Smart Workforce Management System (SQL Project)
+📘 Smart Workforce – Complete SQL Project
 
-A complete enterprise-grade SQL + Data Engineering project that simulates a real-world HR & workforce management platform used in IT companies like Cognizant, TCS, Accenture, etc.
+A fully-designed enterprise-grade Workforce Management Database System featuring schema design, sample data generation, advanced SQL queries, views, indexes, triggers, and analytics.
 
-This project includes a fully normalized schema, real sample data, indexes, views, stored routines, and analytical SQL queries used in business dashboards.
+This project simulates how real HR, Payroll, Project Management, and Attendance systems operate inside a company.
+Use it for placements, resume, GitHub portfolio, SQL mastery, and interviews.
 
-🏗️ Project Architecture
+🌟 Project Highlights
+
+Normalized 3NF schema with strong referential integrity
+
+Departments → Employees → Projects → Salaries → Attendance → Performance
+
+40+ realistic sample dataset entries
+
+25+ analytics & reporting queries
+
+Indexes & Views for optimization
+
+Stored Procedures for auto-data generation
+
+Clean ER diagram included
+
+Works with MySQL 8+
+
+📁 Folder Structure
 smart-workforce-sql/
 │
 ├── sql/
 │   ├── 01_create_schema.sql
 │   ├── 02_insert_sample_data.sql
 │   ├── 03_queries.sql
-│   └── 04_indexes_and_views.sql
+│   ├── 04_indexes_and_views.sql
 │
 ├── docs/
-│   ├── smart_workforce_ERD.png
+│   ├── README.md  ← (this file)
+│   ├── er_diagram.png
 │   └── presentation_script.md
 │
-├── scripts/
-│   └── sample_data_load.sh
-│
-└── README.md
+└── scripts/
+    └── (optional helper scripts)
 
-📊 ER Diagram
+🧩 Database Schema Overview
 
-🚀 Features of the System
-🧩 Core Modules
+    Main Entities
+    | Table                   | Description                     |
+    | ----------------------- | ------------------------------- |
+    | **departments**         | List of company departments     |
+    | **employees**           | Employee master records         |
+    | **projects**            | Major client/internal projects  |
+    | **employee_projects**   | Mapping of employees → projects |
+    | **salaries**            | Monthly salary records          |
+    | **attendance**          | Day-wise presence logs          |
+    | **performance_reviews** | Annual performance evaluation   |
 
-Employees
+## 📊 ER Diagram
 
-Departments
+![ER Diagram](./docs/smart_workforce_ERD.png)
 
-Projects
-
-Employee–Project allocation
-
-Salaries & Payroll
-
-Attendance tracking
-
-Performance reviews
-
-🔍 Technical Strengths
-
-Fully normalized 3NF schema
-
-Strong foreign key constraints
-
-Functions & stored procedures
-
-Views for analytics
-
-Indexing for performance
-
-Window functions (RANK, ROW_NUMBER, OVER PARTITION)
-
-Realistic enterprise sample data
-
-📚 SQL Files Overview
-1️⃣ 01_create_schema.sql
-
-Creates the complete database schema:
-
-Tables
-
-Primary keys
-
-Foreign keys
-
-Constraints
-
-Cascade rules
-
-2️⃣ 02_insert_sample_data.sql
-
-Populates:
-
-Departments
-
-Employees
-
-Projects
-
-Salaries
-
-Attendance
-
-Performance reviews
-
-3️⃣ 03_queries.sql
-
-Includes real-world interview-level SQL queries:
-
-Top performers
-
-Highest salary per department
-
-Monthly attendance analytics
-
-Employee-project utilization
-
-Payroll cost summaries
-
-4️⃣ 04_indexes_and_views.sql
-
-Optimizes read performance:
-
-Indexes
-
-Materialized views (MySQL views)
-
-Analytics dashboards
-
-🖥️ How to Run the Project
+🚀 How to Run the Project
 ✔ Step 1 — Open MySQL terminal
 mysql -u root -p
 
-✔ Step 2 — Run schema
-source sql/01_create_schema.sql;
+✔ Step 2 — Run Schema
+source ./sql/01_create_schema.sql;
 
-✔ Step 3 — Insert sample data
-source sql/02_insert_sample_data.sql;
+✔ Step 3 — Insert Data
+source ./sql/02_insert_sample_data.sql;
 
-✔ Step 4 — Create indexes & views
-source sql/04_indexes_and_views.sql;
+✔ Step 4 — Run all Queries
+source ./sql/03_queries.sql;
 
-✔ Step 5 — Run analytics queries
-source sql/03_queries.sql;
+✔ Step 5 — Add Indexes + Views
+source ./sql/04_indexes_and_views.sql;
 
-🎤 Interview-Ready Explanation
+📊 Sample Analytics Included
+🔹 Employee Analytics
 
-Use this for interviews:
+Employees per department
 
-“This SQL project simulates an enterprise workforce management system.
-I designed a normalized 3NF schema with 7 core entities including employees, projects, salaries, attendance, and performance reviews.
-I implemented foreign keys, cascading rules, indexes for performance optimization, and analytics views.
-The dataset is generated using stored procedures and includes realistic business logic like payroll generation, employee allocation, and attendance tracking.”
+Average salary per department
 
-📈 What This Project Demonstrates
+Top 3 highest-paid employees
 
-Database design (ERD + normalization)
+🔹 Project Analytics
 
-MySQL production-level SQL
+Project workload per employee
 
-Joins, subqueries, window functions
+Total active projects
 
-Indexing & query optimization
+Department-wise project distributions
 
-Data engineering fundamentals
+🔹 Attendance Analytics
 
-Enterprise data modeling
+Monthly attendance percentage
 
-👤 Author
+Identify low attendance employees
 
-Basudev Haldar
-GitHub: https://github.com/dev628140
+🔹 Performance Analytics
 
-LinkedIn: https://linkedin.com/in/dev628140
+Top/Bottom performers
+
+Grade distribution reports
+
+🧠 Technologies Used
+
+MySQL 8+
+
+SQL Views
+
+SQL Indexing
+
+Stored Procedures
+
+Foreign Keys
+
+ER Modeling (Graphviz)
+
+🎯 Purpose of Project
+
+This SQL project is designed for:
+
+✔ Interviews
+✔ Resume Portfolio
+✔ Internship/Placement Tests
+✔ SQL Learning
+✔ Real-world case study experience
+
+It demonstrates solid command over database design, data normalization, constraints, and advanced SQL.
+
+❤️ Contribute / Extend
+
+You may enhance this project by adding:
+
+Triggers (auto-updating modified_at)
+
+Login & Accounts table
+
+KPI dashboards
+
+Payroll automation
